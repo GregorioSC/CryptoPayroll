@@ -20,21 +20,26 @@ public class Company {
     @Column(nullable = false, length = 255)
     private String companyPhone;
 
+    @Column(nullable = false, length = 255)
+    private String companyPassword;
+
 
     public Company() {
     }
 
-    public Company(String companyName, String companyEmail, String companyPhone) {
+    public Company(String companyName, String companyEmail, String companyPhone, String companyPassword) {
         this.companyName = companyName;
         this.companyEmail = companyEmail;
         this.companyPhone = companyPhone;
+        this.companyPassword = companyPassword;
     }
 
-    public Company(Long companyId, String companyName, String companyPhone, String companyEmail) {
+    public Company(Long companyId, String companyName, String companyPhone, String companyEmail, String companyPassword) {
         this.companyId = companyId;
         this.companyName = companyName;
         this.companyPhone = companyPhone;
         this.companyEmail = companyEmail;
+        this.companyPassword = companyPassword;
     }
 
     public String getCompanyPhone() {
